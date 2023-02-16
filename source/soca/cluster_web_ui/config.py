@@ -43,37 +43,37 @@ def get_group_members(group):
     return members
 
 def get_dvc_linux_session_count(user):
-    members = get_group_members('kongtiao')
-    if user in members:
-        return Config.DESIGN_GROUP_1_DCV_LINUX_SESSION_COUNT
-    else:
-        members = get_group_members('bingxiang')
-        if user in members:
-            return Config.DESIGN_GROUP_2_DCV_LINUX_SESSION_COUNT
-        else:
-            return Config.DCV_LINUX_SESSION_COUNT
+    # members = get_group_members('kongtiao')
+    # if user in members:
+    #     return Config.DESIGN_GROUP_1_DCV_LINUX_SESSION_COUNT
+    # else:
+    #     members = get_group_members('bingxiang')
+    #     if user in members:
+    #         return Config.DESIGN_GROUP_2_DCV_LINUX_SESSION_COUNT
+    #     else:
+    return Config.DCV_LINUX_SESSION_COUNT
 
 def get_dvc_windows_session_count(user):
-    members = get_group_members('kongtiao')
-    if user in members:
-        return Config.DESIGN_GROUP_1_DCV_WINDOWS_SESSION_COUNT
-    else:
-        members = get_group_members('bingxiang')
-        if user in members:
-            return Config.DESIGN_GROUP_2_DCV_WINDOWS_SESSION_COUNT
-        else:
-            return Config.DCV_WINDOWS_SESSION_COUNT
+    # members = get_group_members('kongtiao')
+    # if user in members:
+    #     return Config.DESIGN_GROUP_1_DCV_WINDOWS_SESSION_COUNT
+    # else:
+    #     members = get_group_members('bingxiang')
+    #     if user in members:
+    #         return Config.DESIGN_GROUP_2_DCV_WINDOWS_SESSION_COUNT
+    #     else:
+    return Config.DCV_WINDOWS_SESSION_COUNT
 
 def get_dcv_restricted_instance_type(user):
-    members = get_group_members('kongtiao')
-    if user in members:
-        return Config.DESIGN_GROUP_1_DCV_RESTRICTED_INSTANCE_TYPE
-    else:
-        members = get_group_members('bingxiang')
-        if user in members:
-            return Config.DESIGN_GROUP_2_DCV_RESTRICTED_INSTANCE_TYPE
-        else:
-            return Config.DCV_RESTRICTED_INSTANCE_TYPE
+    # members = get_group_members('kongtiao')
+    # if user in members:
+    #     return Config.DESIGN_GROUP_1_DCV_RESTRICTED_INSTANCE_TYPE
+    # else:
+    #     members = get_group_members('bingxiang')
+    #     if user in members:
+    #         return Config.DESIGN_GROUP_2_DCV_RESTRICTED_INSTANCE_TYPE
+    #     else:
+    return Config.DCV_RESTRICTED_INSTANCE_TYPE
 
 
 def boto_extra_config():

@@ -95,8 +95,8 @@ def logout():
     for param in session_data:
         session.pop(param, None)
     # 退出登录，es 删除数据
-    es = get_es_client()
-    es.delete_by_query(index=users_es_index_name, body={'query': {'bool': {'must': {'term': {'user': user}}}}}),
+    # es = get_es_client()
+    # es.delete_by_query(index=users_es_index_name, body={'query': {'bool': {'must': {'term': {'user': user}}}}}),
     return redirect('/')
 
 
@@ -133,12 +133,12 @@ def authenticate():
                 session["sudoers"] = False
 
             # 登录成功，往 es 写数据
-            doc_type = "item"
-            es = get_es_client()
-            add = es.index(index=users_es_index_name, doc_type=doc_type, body={'user': user,
-                                                                               'loginTime': datetime.datetime.now(),
-                                                                               'sudoers': session["sudoers"]})
-            logger.info("success add user " + user + " to es : " + json.dumps(add))
+            # doc_type = "item"
+            # es = get_es_client()
+            # add = es.index(index=users_es_index_name, doc_type=doc_type, body={'user': user,
+            #                                                                    'loginTime': datetime.datetime.now(),
+            #                                                                    'sudoers': session["sudoers"]})
+            # logger.info("success add user " + user + " to es : " + json.dumps(add))
             if redirect_path is not None:
                 return redirect(redirect_path)
             else:
