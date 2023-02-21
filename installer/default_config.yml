@@ -169,3 +169,7 @@ RegionMap:
     amazonlinux2: ami-012363a297a261d65
     centos7: ami-0686851c4e7b1a8e1
     rhel7: ami-068fd644a9270e323
+  cn-northwest-1:
+    amazonlinux2: ami-068c85fe4e7246454 
+    centos7: ami-01c5577a023678002
+    rhel7: ami-01c5577a023678002
